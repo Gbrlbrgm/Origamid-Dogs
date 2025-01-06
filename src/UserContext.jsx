@@ -1,5 +1,5 @@
 import React from 'react';
-import { TOKEN_POST, TOKEN_VALIDATE_POST, USER_GET } from './api';
+import { TOKEN_POST, TOKEN_VALIDATE_POST, USER_GET } from './Api';
 import { useNavigate } from 'react-router-dom';
 
 export const UserContext = React.createContext();
@@ -58,7 +58,7 @@ export const UserStorage = ({ children }) => {
           setError(null);
           setLoading(true);
           const { url, options } = TOKEN_VALIDATE_POST(token);
-          const response = await fetch(url.options);
+          const response = await fetch(url, options);
           if (!response.ok) throw new Error('Token inválido');
           await getUser(token);
         } catch (err) {
@@ -79,5 +79,3 @@ export const UserStorage = ({ children }) => {
     </UserContext.Provider>
   );
 };
-
-export default UserContext;

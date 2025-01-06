@@ -43,7 +43,7 @@ export function USER_POST(body) {
     options: {
       method: 'POST',
       headers: {
-        'Content-Type': 'Application/json',
+        'Content-Type': 'application/json',
       },
       body: JSON.stringify(body),
     },
