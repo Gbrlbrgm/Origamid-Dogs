@@ -1,15 +1,14 @@
 import React from 'react';
-import styles from './LoginCreate.module.css';
 import Input from '../Forms/Input';
-import Button from '../Forms/Input';
+import Button from '../Forms/Button';
 import useForm from '../../Hooks/useForm';
 import { USER_POST } from '../../Api';
-import UserContext from '../../UserContext';
+import { UserContext } from '../../UserContext';
 
 const LoginCreate = () => {
-  const username = React.useForm();
-  const email = React.useForm('email');
-  const password = React.useForm();
+  const username = useForm();
+  const email = useForm('email');
+  const password = useForm();
 
   const { userLogin } = React.useContext(UserContext);
 
