@@ -85,7 +85,6 @@ export function PHOTO_GET(id) {
 
 export function COMMENT_POST(id, body) {
   return {
-    url: `${API_URL}/api/photo/${id}`,
     options: {
       method: 'POST',
       headers: {
