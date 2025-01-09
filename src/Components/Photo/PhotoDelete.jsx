@@ -3,7 +3,7 @@ import styles from './PhotoDelete.module.css';
 import { PHOTO_DELETE } from '../../Api';
 import useFetch from '../../Hooks/useFetch';
 
-const PhotoDelete = () => {
+const PhotoDelete = ({ id }) => {
   const { loading, request } = useFetch();
 
   async function handleClick() {
